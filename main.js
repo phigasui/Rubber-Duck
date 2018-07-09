@@ -16,14 +16,15 @@ const createWindow = () => {
     show: true,
     transparent: true,
     resizable: false,
-    alwaysOnTop: true
+    alwaysOnTop: true,
+    hasShadow: false
   });
   win.setIgnoreMouseEvents(true)
   win.maximize()
   win.loadFile('dist/index.html')
 
   // win.openDevTools()
-  
+
   win.on('closed', () => {
     win = null
   })
