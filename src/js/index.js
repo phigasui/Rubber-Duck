@@ -7,7 +7,7 @@ const IMG_WIDTH = 100
 
 const INITIAL_MESSAGE = "おはようございます！"
 
-const MESSAGESS = [
+const MESSAGES = [
   "おつかれさまです！",
   "がんばってください！"
 ]
@@ -47,6 +47,7 @@ const Duck = () => (state, actions) => (
   >
     {() => {
       if (state.message) return <p style={{background: "#DDD", color: "#333"}}>{state.message}</p>
+      return null
     }}
     <a href="javascript:void(0)">
       <img
