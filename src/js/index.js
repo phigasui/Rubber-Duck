@@ -36,6 +36,35 @@ const actions = {
   }
 }
 
+const Message = ({message}) => (
+  <div
+    style={{
+      position: "relative",
+      display: "table-cell",
+      width: 90,
+      height: 90,
+      background: "#70a6ff",
+      "border-radius": "50%",
+      color: "#EEE",
+      "vertical-align": "middle",
+      "text-align": "center"
+    }}>
+    <p>
+      {message}
+    </p>
+    <div
+      style={{
+        position: "absolute",
+        bottom: -18,
+        left: "50%",
+        border: "10px solid transparent",
+        "border-top": "15px solid #70a6ff",
+        "margin-left": -10
+      }}>
+    </div>
+  </div>
+)
+
 const Duck = () => (state, actions) => (
   <div
     oncreate={actions.start}
@@ -46,7 +75,7 @@ const Duck = () => (state, actions) => (
     }}
   >
     {() => {
-      if (state.message) return <p style={{background: "#DDD", color: "#333"}}>{state.message}</p>
+      if (state.message) return <Message message={state.message} />
       return null
     }}
     <a href="javascript:void(0)">
