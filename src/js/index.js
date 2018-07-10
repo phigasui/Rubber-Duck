@@ -39,6 +39,7 @@ const actions = {
 const Message = ({message}) => (
   <div
     style={{
+      "font-family": "Gulim, sans-serif",
       position: "relative",
       display: "table-cell",
       width: 90,
@@ -47,7 +48,8 @@ const Message = ({message}) => (
       "border-radius": "50%",
       color: "#EEE",
       "vertical-align": "middle",
-      "text-align": "center"
+      "text-align": "center",
+      opacity: 0.8
     }}>
     <p>
       {message}
@@ -88,7 +90,7 @@ const Duck = () => (state, actions) => (
 
 const view = (state, actions) => (
   <main>
-  <Duck />
+    <Duck />
   </main>
 )
 
