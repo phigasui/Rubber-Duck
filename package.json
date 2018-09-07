@@ -13,8 +13,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^6.0.0",
     "electron": "^2.0.4",
-    "hyperapp": "^1.2.6"
+    "hyperapp": "^1.2.6",
+    "node-twitter-api": "^1.8.0"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",
