@@ -94,10 +94,8 @@ exports.getTimeline = function(type, params, callback) {
       if (error) {
         console.log(error)
       } else {
-        console.log(data[0]['text'])
         callback(data[0]['text'])
       }
     }
   )
-  win.setIgnoreMouseEvents(false)
 }
