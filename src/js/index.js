@@ -1,6 +1,11 @@
 import { h, app } from "hyperapp"
 
-const PARAMS = {count: 1, screen_name: 'maina_5656'}
+const PARAMS = {
+  count: 1,
+  // need user_id or screen_name
+  user_id: '1038284807401140225',
+  // screen_name: 'LQj2SSxMaPm3fat',
+}
 const DEFAULT_IMAGE_SRC = "images/ishino_last.png"
 
 const IMG_WIDTH = 100
@@ -41,32 +46,34 @@ const actions = {
 
 const Message = ({message}) => (
   <div
-  style={{
-    "font-family": "Gulim, sans-serif",
-    position: "relative",
-    display: "table-cell",
-    width: 90,
-    height: 90,
-    background: "#70a6ff",
-    "border-radius": "3%",
-    color: "#EEE",
-    "vertical-align": "middle",
-    "text-align": "center",
-    opacity: 0.8
-  }}>
-  <p>
-  {message}
-  </p>
-  <div
-  style={{
-    position: "absolute",
-    bottom: -18,
-    left: "50%",
-    border: "10px solid transparent",
-    "border-top": "15px solid #70a6ff",
-    "margin-left": -10
-  }}>
-  </div>
+    style={{
+      "font-family": "Gulim, sans-serif",
+      position: "relative",
+      display: "table-cell",
+      width: 90,
+      height: 90,
+      background: "#70a6ff",
+      "border-radius": "3%",
+      color: "#EEE",
+      "vertical-align": "middle",
+      "text-align": "center",
+      padding: 10,
+      opacity: 0.8
+    }}>
+    <p>
+      {message}
+    </p>
+    <div
+      style={{
+        position: "absolute",
+        bottom: -18,
+        left: "50%",
+        border: "10px solid transparent",
+        "border-top": "15px solid #70a6ff",
+        "margin-left": -10,
+        "z-index": -1,
+      }}>
+    </div>
   </div>
 )
 

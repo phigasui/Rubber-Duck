@@ -37,6 +37,7 @@ const createWindow = () => {
 
   init()
 
+  // for debug
   // win.openDevTools()
 
   win.on('closed', () => {
@@ -48,6 +49,7 @@ const createWindow = () => {
 const init = () => {
   twitter.getRequestToken((error, requestToken, requestTokenSecret, results) => {
     const url = twitter.getAuthUrl(requestToken)
+
     win.webContents.on('will-navigate', (event, url) => {
       const matched = url.match(/\?oauth_token=([^&]*)&oauth_verifier=([^&]*)/)
 
@@ -73,15 +75,11 @@ const init = () => {
 
 
 app.on('ready', createWindow)
-
 app.on('window-all-closed', () => {
   if (process.platform != 'darwin') app.quit()
 })
-
 app.on('activate', () => {
-  if (win === null) {
-    createWindow()
-  }
+  if (win === null) createWindow()
 })
 
 exports.getTimeline = function(type, params, callback) {
