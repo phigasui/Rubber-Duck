@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "webpack-dev-server --mode development",
     "build": "webpack --mode production",
-    "start": "electron ."
+    "start": "electron .",
+    "package": "electron-packager . RubberDuck --platform=darwin,win32,linux --arch64 --out=Apps"
   },
   "keywords": [],
   "author": "",
@@ -15,6 +16,7 @@
   "dependencies": {
     "dotenv": "^6.0.0",
     "electron": "^2.0.4",
+    "electron-packager": "^12.1.1",
     "hyperapp": "^1.2.6",
     "node-twitter-api": "^1.8.0"
   },
